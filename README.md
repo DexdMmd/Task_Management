@@ -1,4 +1,4 @@
-# Task Management App
+# Task Management App🤔
 - **Overview**: Provides a brief description of the app and its purpose.
 - **Features**: Lists the main features of the app.
 - **Technologies Used**: Specifies the technologies and frameworks used in the app.
@@ -21,7 +21,7 @@ The Task Management App is a simple web application built using Django and Pytho
 
 ## Technologies Used
 
-- Python 3.8 or newer
+🐍- Python 3.8 or newer
 - Django 3.0 or newer
 - SQLite (default database)
 - Django REST Framework for API functionality
