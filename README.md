@@ -30,7 +30,7 @@ The Task Management App is a simple web application built using Django and Pytho
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Dexdmmd/task-management-app.git
+   git clone https://github.com/Dexdmmd/task_management.git
    cd task-management-app
 2. Create a virtual environment:
    ```bash
@@ -97,7 +97,7 @@ The Task Management App is a simple web application built using Django and Pytho
 
 1. مخزن را کلون کنید:
    ```bash
-   git clone https://github.com/dexdmmd/task-management-app.git
+   git clone https://github.com/Dexdmmd/task_management.git
    cd task-management-app
    ```
 
