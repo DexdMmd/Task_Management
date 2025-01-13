@@ -16,7 +16,6 @@ The Task Management App is a simple web application built using Django and Pytho
 
 - User-friendly interface for managing tasks
 - Create, read, update, and delete tasks (CRUD operations)
-- Multilingual support (English and Farsi)
 - Admin panel for managing tasks
 
 ## Technologies Used
@@ -83,7 +82,6 @@ The Task Management App is a simple web application built using Django and Pytho
 
 - رابط کاربری آسان برای مدیریت وظایف
 - ایجاد، خواندن، به‌روزرسانی و حذف وظایف (عملیات CRUD)
-- پشتیبانی از چند زبان (انگلیسی و فارسی)
 - پنل مدیریت برای مدیریت وظایف
 
 ## فناوری‌های مورد استفاده
