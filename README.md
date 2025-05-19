@@ -1,141 +1,207 @@
-# Task Management App🤔
-- **Overview**: Provides a brief description of the app and its purpose.
-- **Features**: Lists the main features of the app.
-- **Technologies Used**: Specifies the technologies and frameworks used in the app.
-- **Installation**: Step-by-step instructions on how to set up the app locally.
-- **Usage**: Brief instructions on how to use the app.
-## Overview
+Task Management App 🤔
+Overview
+The Task Management App is a simple web application built using Django and Python for the backend, with a Vue.js frontend. It allows users to create, read, update, and delete tasks efficiently with a user-friendly interface.
 
-The Task Management App is a simple web application built using Django and Python. It allows users to create, read, update, and delete tasks.
-### Explanation of the README
+Features
+User-friendly interface for managing tasks
 
+Create, read, update, and delete tasks (CRUD operations)
 
+Admin panel for task management
 
+REST API powered by Django REST Framework
 
-### Features
+Vue.js frontend for reactive task management
 
-- User-friendly interface for managing tasks
-- Create, read, update, and delete tasks (CRUD operations)
-- Admin panel for managing tasks
+Task status tracking (completed or not)
 
-## Technologies Used
+Responsive design with modern UI/UX
 
-🐍- Python 3.8 or newer
-- Django 3.0 or newer
-- SQLite (default database)
-- Django REST Framework for API functionality
+Technologies Used
+Python 3.8+
 
-## Installation
+Django 3.0+
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Dexdmmd/task_management.git
-   cd task-management-app
-2. Create a virtual environment:
-   ```bash
-   python -m venv env
-   ```
+Django REST Framework
 
-3. Activate the virtual environment:
-   - On Windows:
-     ```bash
-     env\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source env/bin/activate
-     ```
+SQLite (default database)
 
-4. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Vue.js 3
 
-5. Run migrations:
-   ```bash
-   python manage.py migrate
-   ```
+Axios (for API requests)
 
-6. Create a superuser to access the admin panel:
-   ```bash
-   python manage.py createsuperuser
-   ```
+HTML5, CSS3 with modern styling
 
-7. Start the development server:
-   ```bash
-   python manage.py runserver
-   ```
+Installation
+Clone the repository:
 
-8. Access the app at `http://127.0.0.1:8000/` and the admin panel at `http://127.0.0.1:8000/admin/`.
+bash
+Copy
+Edit
+git clone https://github.com/DexdMmd/Task_Management.git
+cd Task_Management
+Create and activate a virtual environment:
 
-## Usage
+On Windows:
 
-- Use the admin panel to manage tasks.
----
-# برنامه مدیریت وظایف
+bash
+Copy
+Edit
+python -m venv env
+env\Scripts\activate
+On macOS/Linux:
 
-## معرفی
+bash
+Copy
+Edit
+python -m venv env
+source env/bin/activate
+Install dependencies:
 
-برنامه مدیریت وظایف یک برنامه وب ساده است که با استفاده از Django و Python ساخته شده است. این برنامه به کاربران اجازه می‌دهد تا وظایف را ایجاد، خواندن، به‌روزرسانی و حذف کنند.
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Apply migrations:
 
-### ویژگی‌ها
+bash
+Copy
+Edit
+python manage.py migrate
+Create a superuser for admin access:
 
-- رابط کاربری آسان برای مدیریت وظایف
-- ایجاد، خواندن، به‌روزرسانی و حذف وظایف (عملیات CRUD)
-- پنل مدیریت برای مدیریت وظایف
+bash
+Copy
+Edit
+python manage.py createsuperuser
+Run the backend server:
 
-## فناوری‌های مورد استفاده
+bash
+Copy
+Edit
+python manage.py runserver
+Set up and run the Vue frontend (in a separate directory):
 
-- Python 3.8 یا جدیدتر
-- Django 3.0 یا جدیدتر
-- SQLite (پایگاه داده پیش‌فرض)
-- Django REST Framework برای عملکرد API
+bash
+Copy
+Edit
+git clone https://github.com/DexdMmd/task-manager-frontend.git
+cd task-manager-frontend
+npm install
+npm run dev
+Usage
+Access the Django backend API at http://127.0.0.1:8000/
 
-## نصب
+Access the Django admin panel at http://127.0.0.1:8000/admin/ to manage tasks directly
 
-1. مخزن را کلون کنید:
-   ```bash
-   git clone https://github.com/Dexdmmd/task_management.git
-   cd task-management-app
-   ```
+Access the Vue.js frontend at http://localhost:5173 to interact with tasks in a modern UI
 
-2. یک محیط مجازی ایجاد کنید:
-   ```bash
-   python -m venv env
-   ```
+Use the task form to add new tasks, mark completed, and delete tasks
 
-3. محیط مجازی را فعال کنید:
-   - در ویندوز:
-     ```bash
-     env\Scripts\activate
-     ```
-   - در macOS/Linux:
-     ```bash
-     source env/bin/activate
-     ```
+All task data is synced via the Django REST API
 
-4. بسته‌های مورد نیاز را نصب کنید:
-   ```bash
-   pip install -r requirements.txt
-   ```
+GitHub Branch Info
+The main branch holds the backend Django code.
 
-5. تغییرات را اجرا کنید:
-   ```bash
-   python manage.py migrate
-   ```
+The vue-integration branch contains the Vue.js frontend integration.
 
-6. یک کاربر ادمین ایجاد کنید تا به پنل مدیریت دسترسی پیدا کنید:
-   ```bash
-   python manage.py createsuperuser
-   ```
+Make sure to pull or switch branches appropriately:
 
-7. سرور توسعه را راه‌اندازی کنید:
-   ```bash
-   python manage.py runserver
-   ```
+bash
+Copy
+Edit
+git checkout vue-integration
+فارسی — معرفی برنامه مدیریت وظایف
+معرفی
+برنامه مدیریت وظایف یک برنامه وب ساده است که با استفاده از Django و Python برای بک‌اند و Vue.js برای فرانت‌اند ساخته شده است. کاربران می‌توانند وظایف خود را ایجاد، مشاهده، به‌روزرسانی و حذف کنند.
 
-8. به برنامه در `http://127.0.0.1:8000/` و به پنل مدیریت در `http://127.0.0.1:8000/admin/` دسترسی پیدا کنید.
+ویژگی‌ها
+رابط کاربری آسان برای مدیریت وظایف
 
-## استفاده
+عملیات CRUD روی وظایف
 
-- از پنل مدیریت برای مدیریت وظایف استفاده کنید.
+پنل مدیریت ادمین
+
+API قدرتمند با Django REST Framework
+
+رابط کاربری مدرن با Vue.js
+
+امکان پیگیری وضعیت انجام وظایف
+
+فناوری‌های استفاده شده
+Python 3.8+
+
+Django 3.0+
+
+Django REST Framework
+
+SQLite
+
+Vue.js 3
+
+Axios
+
+نصب
+کلون کردن مخزن:
+
+bash
+Copy
+Edit
+git clone https://github.com/DexdMmd/Task_Management.git
+cd Task_Management
+ایجاد و فعال‌سازی محیط مجازی:
+
+در ویندوز:
+
+bash
+Copy
+Edit
+python -m venv env
+env\Scripts\activate
+در مک/لینوکس:
+
+bash
+Copy
+Edit
+python -m venv env
+source env/bin/activate
+نصب بسته‌ها:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+اجرای مهاجرت‌ها:
+
+bash
+Copy
+Edit
+python manage.py migrate
+ایجاد کاربر ادمین:
+
+bash
+Copy
+Edit
+python manage.py createsuperuser
+اجرای سرور:
+
+bash
+Copy
+Edit
+python manage.py runserver
+اجرای فرانت‌اند Vue (در پوشه جداگانه):
+
+bash
+Copy
+Edit
+git clone https://github.com/DexdMmd/task-manager-frontend.git
+cd task-manager-frontend
+npm install
+npm run dev
+استفاده
+دسترسی به API در http://127.0.0.1:8000/
+
+پنل مدیریت در http://127.0.0.1:8000/admin/
+
+رابط کاربری Vue در http://localhost:5173
+
