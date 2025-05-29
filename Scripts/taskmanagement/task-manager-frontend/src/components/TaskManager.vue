@@ -5,12 +5,35 @@
       <form @submit.prevent="addTask">
         <input v-model="newTask.title" placeholder="Title *" required />
         <textarea v-model="newTask.description" placeholder="Description *" required></textarea>
+
+        <label>Start Time:</label>
         <input type="datetime-local" v-model="newTask.start_time" required />
+
+        <label>End Time:</label>
         <input type="datetime-local" v-model="newTask.end_time" required />
+
+        <!-- Status Dropdown -->
+        <label>Status:</label>
+        <select v-model="newTask.status" required>
+          <option value="to_do">To Do</option>
+          <option value="in_progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+
+        <!-- Category Dropdown -->
+        <label>Category:</label>
+        <select v-model="newTask.category" required>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="urgent">Urgent</option>
+        </select>
+
         <label>
           <input type="checkbox" v-model="newTask.completed" /> Completed
         </label>
+
         <input v-model="newTask.assigned_to" placeholder="Assigned Users / Groups (comma separated)" />
+
         <button type="submit">➕ Add Task</button>
       </form>
     </div>
@@ -21,7 +44,19 @@
           <h3>{{ task.title }}</h3>
           <p>{{ task.description }}</p>
           <p><strong>Start:</strong> {{ task.start_time }} | <strong>End:</strong> {{ task.end_time }}</p>
-          <p><strong>Completed:</strong> <span class="status" :class="{ completed: task.completed, notcompleted: !task.completed }">{{ task.completed ? '✅ Yes' : '❌ No' }}</span></p>
+          
+          <!-- Show Status -->
+          <p><strong>Status:</strong> {{ formatStatus(task.status) }}</p>
+          
+          <!-- Show Category -->
+          <p><strong>Category:</strong> {{ formatCategory(task.category) }}</p>
+
+          <p><strong>Completed:</strong> 
+            <span class="status" :class="{ completed: task.completed, notcompleted: !task.completed }">
+              {{ task.completed ? '✅ Yes' : '❌ No' }}
+            </span>
+          </p>
+
           <p><strong>Assigned to:</strong> {{ task.assigned_to }}</p>
           <button @click="deleteTask(task.id)">🗑️ Delete</button>
         </li>
@@ -42,6 +77,8 @@ export default {
         description: '',
         start_time: '',
         end_time: '',
+        status: 'to_do',         // Default value
+        category: 'work',        // Default value
         completed: false,
         assigned_to: '',
       },
@@ -62,6 +99,8 @@ export default {
             description: '',
             start_time: '',
             end_time: '',
+            status: 'to_do',
+            category: 'work',
             completed: false,
             assigned_to: '',
           };
@@ -74,6 +113,20 @@ export default {
           this.fetchTasks();
         });
     },
+    formatStatus(status) {
+      return {
+        to_do: '📌 To Do',
+        in_progress: '🔄 In Progress',
+        done: '✅ Done'
+      }[status];
+    },
+    formatCategory(category) {
+      return {
+        work: '💼 Work',
+        personal: '👤 Personal',
+        urgent: '🔥 Urgent'
+      }[category];
+    }
   },
   mounted() {
     this.fetchTasks();
@@ -115,7 +168,8 @@ export default {
   gap: 12px;
 }
 .task-form input,
-.task-form textarea {
+.task-form textarea,
+.task-form select {
   padding: 12px;
   border: none;
   border-radius: 10px;
