@@ -1,5 +1,6 @@
 
 # Task Management App 🤔
+![image](https://github.com/user-attachments/assets/c8fba022-2af9-4eef-b3c5-a454a4ef3232)
 
 ## Overview
 The Task Management App is a simple web application built using Django and Python. It allows users to create, read, update, and delete tasks. This branch integrates a Vue.js frontend for a more dynamic user experience.
